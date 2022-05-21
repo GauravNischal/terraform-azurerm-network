@@ -20,8 +20,6 @@ resource "azurerm_subnet" "subnet" {
   virtual_network_name                           = azurerm_virtual_network.vnet.name
   enforce_private_link_endpoint_network_policies = lookup(var.subnet_enforce_private_link_endpoint_network_policies, var.subnet_names[count.index], false)
   service_endpoints                              = lookup(var.subnet_service_endpoints, var.subnet_names[count.index], [])
-  service_endpoint_policy_ids                    = lookup(var.subnet_service_endpoint_policy_id, var.subnet_names[count.index], [])
+  service_endpoint_policy_ids                    = lookup(var.subnet_service_endpoint_policy_ids, var.subnet_names[count.index], null)
 }
 
-
-# service_endpoint_policy_ids                    = [var.subnet_service_endpoint_policy_id]
