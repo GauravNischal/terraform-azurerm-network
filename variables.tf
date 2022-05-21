@@ -61,7 +61,7 @@ variable "subnet_service_endpoints" {
   default     = {}
 }
 
-variable "subnet_service_endpoint_policy_id" {
+variable "subnet_service_endpoint_policy_ids" {
   description = "Service endpoints Policy ID for the subnet. Default value is []."
   type        = map(list(string))
   default     = {}
