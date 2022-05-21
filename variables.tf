@@ -63,6 +63,4 @@ variable "subnet_service_endpoints" {
 
 variable "subnet_service_endpoint_policy_id" {
   description = "Service endpoints Policy ID for the subnet. Default value is []."
-  type        = list(any)
-  default     = []
 }
